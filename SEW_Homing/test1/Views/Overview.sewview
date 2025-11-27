@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SEWView Name="Overview">
+  <CreationTime>14/08/2025 14:19:24</CreationTime>
+  <LastWriteTime>28/08/2025 15:27:54</LastWriteTime>
+  <MMSVersion>6.6.0.0</MMSVersion>
+  <SyntaxVersion>4.0</SyntaxVersion>
+  <OSVersion>Microsoft Windows NT 6.2.9200.0</OSVersion>
+  <Nodes>
+    <ProjectNode Expand="true" Name="test1">
+      <DeviceNode Expand="false" Signature="IPOS_Mode">
+        <State>
+          <Flags>NoRouting</Flags>
+        </State>
+      </DeviceNode>
+      <DeviceNode Expand="false" Signature="Manual_Mode">
+        <State>
+          <Flags>NoRouting</Flags>
+        </State>
+      </DeviceNode>
+      <DeviceNode Expand="false" Signature="IPOS_PLC">
+        <State>
+          <Flags>InitiallySelected</Flags>
+        </State>
+      </DeviceNode>
+    </ProjectNode>
+  </Nodes>
+</SEWView>

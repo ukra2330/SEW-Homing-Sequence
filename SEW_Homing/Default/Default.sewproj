@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MotionStudioProject Name="Default">
+  <ActiveNetworkView>Network</ActiveNetworkView>
+  <SyntaxVersion>4.1</SyntaxVersion>
+  <CreationTime>28/08/2025 11:37:44</CreationTime>
+  <LastWriteTime>28/08/2025 11:37:49</LastWriteTime>
+  <MMSVersion>6.6.0.0</MMSVersion>
+  <OSVersion>Microsoft Windows NT 6.2.9200.0</OSVersion>
+  <Author />
+  <Comment />
+  <TCI>false</TCI>
+  <ShortSig>true</ShortSig>
+  <TCISingle>false</TCISingle>
+  <Resources />
+  <Devices />
+  <DeviceGroups />
+  <NetworkViews>
+    <NetworkView Name="Network">
+      <RelativeFilePath>Views\Network.sewview</RelativeFilePath>
+      <Comment />
+    </NetworkView>
+  </NetworkViews>
+  <ProjectView Name="Overview">
+    <RelativeFilePath>Views\Overview.sewview</RelativeFilePath>
+  </ProjectView>
+</MotionStudioProject>

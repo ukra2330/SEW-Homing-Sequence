@@ -1,0 +1,52 @@
+/*=============================================
+              IPOS Source File
+===============================================*/
+#include <constb.h>
+#include <iob.h>
+
+
+//Note:
+//Movidrive inverters with activated technology function "ISYNCH" or "Cam"
+//do not support variables H360 an higher.
+
+
+/*=============================================
+      Main Function (IPOS Entry Function)
+===============================================*/
+main()
+  {
+    OptOutpIPOS = 0;
+    while(1)
+    {
+      while (!((InpLevelB & 0x100) >> 8));
+      while (((InpLevelB & 0x100) >> 8));
+      H3 = 1;
+      H0 = 8;
+      OptOutpIPOS = H0;
+      _Wait (250);
+      OptOutpIPOS = 0;
+      _Wait (250);
+      for (H1 = 0; H1 < 4 ; H1++)
+        {
+          for (H2 = 0; H2 < 8; H2++)
+            {
+              if (H3 == 1)
+                {
+                  H0 = H0 << 1;
+                  if (H0 == 128)
+                    H3 = 0;
+                }
+              else
+                {
+                  H0 = H0 >> 1;
+                  if (H0 == 8)
+                    H3 = 1;
+                }
+              OptOutpIPOS = H0;
+              _Wait (250);
+              OptOutpIPOS = 0;
+              _Wait (250);
+             }
+         }
+     }
+  }

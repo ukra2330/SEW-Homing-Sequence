@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MotionStudioProject Name="test1">
+  <ActiveNetworkView>Network</ActiveNetworkView>
+  <SyntaxVersion>4.1</SyntaxVersion>
+  <CreationTime>14/08/2025 14:19:24</CreationTime>
+  <LastWriteTime>28/08/2025 15:27:54</LastWriteTime>
+  <MMSVersion>6.6.0.0</MMSVersion>
+  <OSVersion>Microsoft Windows NT 6.2.9200.0</OSVersion>
+  <Author />
+  <Comment />
+  <TCI>false</TCI>
+  <ShortSig>true</ShortSig>
+  <TCISingle>false</TCISingle>
+  <Resources />
+  <Devices>
+    <Device Name="IPOS_Mode" Signature="IPOS_Mode">
+      <TciDeviceRef />
+      <Type>MDX_B</Type>
+      <FirmwarePart>1822 091 6</FirmwarePart>
+      <FirmwareStatus>10</FirmwareStatus>
+      <Label>MDX61B0014-5A3</Label>
+    </Device>
+    <Device Name="Manual_Mode" Signature="Manual_Mode">
+      <TciDeviceRef />
+      <Type>MDX_B</Type>
+      <FirmwarePart>1822 091 6</FirmwarePart>
+      <FirmwareStatus>10</FirmwareStatus>
+      <Label>MDX61B0014-5A3</Label>
+    </Device>
+    <Device Name="IPOS_PLC" Signature="IPOS_PLC">
+      <TciDeviceRef />
+      <Type>MDX_B</Type>
+      <FirmwarePart>1822 091 6</FirmwarePart>
+      <FirmwareStatus>10</FirmwareStatus>
+      <Label>MDX61B0014-5A3</Label>
+    </Device>
+  </Devices>
+  <DeviceGroups />
+  <NetworkViews>
+    <NetworkView Name="Network">
+      <RelativeFilePath>Views\Network.sewview</RelativeFilePath>
+      <Comment />
+    </NetworkView>
+  </NetworkViews>
+  <ProjectView Name="Overview">
+    <RelativeFilePath>Views\Overview.sewview</RelativeFilePath>
+  </ProjectView>
+</MotionStudioProject>

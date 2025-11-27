@@ -1,0 +1,71 @@
+/*=============================================
+              IPOS Source File
+===============================================*/
+#include <constb.h>
+#include <iob.h>
+
+
+//Note:
+//Movidrive inverters with activated technology function "ISYNCH" or "Cam"
+//do not support variables H360 an higher.
+
+/*=============================================
+                     INFO
+
+
+/*=============================================
+      Main Function (IPOS Entry Function)
+===============================================*/
+#define OPT_INPUTS ((InpLevelB & 0x00ff))
+#define REFERENCED ((StatusWord & 0x00100000) >> 20)
+#define START       DI05                      // X13 6
+#define Colocar     DI06                      // X16 1
+#define Pos_CAPAS   30000
+#define Pos_COLOCAR 60000
+#define Pos_TARGET  H492
+#define Pos_Actual  H511
+#define Phase_1     H14
+#define Phase_2     H15
+main()
+
+  {
+    StdOutpIPOS = 0;                          // turn all option outputs off
+    _Wait (5000);                             // startup time
+
+    while(1)
+    {
+      if(!START)                              // (DI05 = OFF)
+      {
+        _AxisStop(AS_PSTOP);                  //
+        _AxisStop(AS_HCTRL);                  // all types of motion disabled
+        _AxisStop(AS_RSTOP);                  //
+
+        Phase_1 = 0;
+        Phase_2 = 0;
+      }
+
+     if(START && !REFERENCED)                 // DI05 = ON and not referenced
+      {
+         _AxisStop(AS_ENABLE);                // enable motion
+         _Go0(GO0_U_W_CAM);                   // begin referencing, even if !DI05 it must reference
+         Phase_1 = 0;
+         Phase_2 = 0;
+      }
+
+      if(START && REFERENCED && !Colocar)     // DIO5 = ON and referenced
+      {
+        _AxisStop(AS_ENABLE);                 // enable motion
+        _GoAbs(GO_NOWAIT, Pos_CAPAS);         // Go to position 30000, if DI05 = OFF it stops
+        Phase_1 = 1;
+        Phase_2 = 0;
+      }
+
+      if(START && REFERENCED && Colocar)
+      {
+        _AxisStop(AS_ENABLE);                 // enable motion
+        _GoAbs(GO_NOWAIT, Pos_COLOCAR);       // moves to position 60000
+        Phase_1 = 0;
+        Phase_2 = 1;
+      }
+    }
+  }

@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SEWView Name="Network">
+  <Comment />
+  <CreationTime>14/08/2025 14:19:24</CreationTime>
+  <LastWriteTime>28/08/2025 15:27:54</LastWriteTime>
+  <MMSVersion>6.6.0.0</MMSVersion>
+  <SyntaxVersion>4.0</SyntaxVersion>
+  <OSVersion>Microsoft Windows NT 6.2.9200.0</OSVersion>
+  <Nodes>
+    <RootNode Expand="true" Name="Network">
+      <MediumNode Expand="true" MediumType="Serial">
+        <DeviceNode Expand="false" Signature="IPOS_PLC">
+          <Gateway>
+            <Value>false</Value>
+          </Gateway>
+          <RoutingInfo Channel="UseChannel1">
+            <Address>0</Address>
+            <AddressType>ByteAddress</AddressType>
+            <AddressData adr0="0" adr1="0" adr2="0" ch1="0" ch2="0" />
+          </RoutingInfo>
+          <Topology>
+            <Subchannels />
+            <EntryCount>0</EntryCount>
+            <Valid>false</Valid>
+            <Flat>false</Flat>
+          </Topology>
+        </DeviceNode>
+        <State>
+          <Flags>InitiallySelected</Flags>
+        </State>
+        <RoutingInfo Channel="UseChannel1">
+          <Address>0</Address>
+          <AddressType>ByteAddress</AddressType>
+          <AddressData adr0="0" adr1="0" adr2="0" ch1="0" ch2="0" />
+        </RoutingInfo>
+        <BusNumber>0</BusNumber>
+      </MediumNode>
+    </RootNode>
+  </Nodes>
+  <CommunicationPlugs>
+    <Serial>
+      <Medium>etSerial</Medium>
+      <Active>true</Active>
+      <Open>true</Open>
+      <COM>6</COM>
+      <Baudrate>KB_57600</Baudrate>
+      <ParameterTimeout>100</ParameterTimeout>
+      <ParameterRetry>3</ParameterRetry>
+      <MultibyteTimeout>350</MultibyteTimeout>
+      <MultibyteRetry>3</MultibyteRetry>
+      <IsUsb>true</IsUsb>
+    </Serial>
+    <None />
+    <None />
+    <None />
+  </CommunicationPlugs>
+  <CommunicationParams>
+    <Serial>
+      <AutoDetectionEnabled>true</AutoDetectionEnabled>
+      <PeerToPeerScan>true</PeerToPeerScan>
+    </Serial>
+    <None />
+    <None />
+    <None />
+  </CommunicationParams>
+  <SMLPAddressTable>
+    <List />
+  </SMLPAddressTable>
+  <EthercatAddressTable>
+    <List />
+  </EthercatAddressTable>
+  <KLinkAddressTable>
+    <List />
+  </KLinkAddressTable>
+</SEWView>
