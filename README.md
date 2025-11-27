@@ -34,6 +34,3 @@ This section highlights the critical task of mapping physical I/O and configurin
 * **Function:** The IPOS Plus program is the central brain for finding the mechanical zero of the system.
 * **Methodology:** The program defines the specific speed profiles, deceleration ramps, and limit switch handling required to safely execute the Homing sequence.
 * **Testing Setup:** For the development phase, a SEW motor with a clamp (*braçadeira*) was used to simulate the robotic arm's movement and positioning feedback.
-
-
-Espero que este rascunho esteja completo. Qual é o próximo passo que gostaria de dar?
